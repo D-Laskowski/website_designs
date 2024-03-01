@@ -1,0 +1,399 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+  color: grey;
+}
+header {
+  z-index: 999;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.507);
+
+  h1 {
+    font-size: 4rem;
+    margin-left: 2rem;
+    color: grey;
+  }
+
+  ul {
+    display: flex;
+
+    li {
+      list-style: none;
+
+      a {
+        padding: 10px 15px;
+        text-decoration: none;
+        color: grey;
+        font-size: 2rem;
+        font-weight: 500;
+        margin-right: 2rem;
+      }
+      a.active, a:hover {
+        border-radius: 1.5rem;
+        background: rgb(240, 240, 21);
+        color: white;
+        text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.315);
+      }
+    }
+  }
+}
+div.main {
+  position: relative;
+  height: 100vh;
+  background-image: url("../images/background1.jpg");
+  background-position: center;
+  background-size: cover;
+
+  img.virus {
+    z-index: -1;
+    max-width: 15%;
+    animation: virus 20s infinite;
+  }
+  div.maincontent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    div.stayhome {
+      img {
+        max-width: 100%;
+        animation: stayhome 8s infinite ease-in-out;
+        transform-origin: top;
+      }
+    }
+    div.maintext {
+      z-index: 2;
+      margin-left: -350px;
+      h3 {
+        color: rgb(224, 211, 28);
+        font-size: 3rem;
+        font-weight: 400;
+      }
+      h2 {
+        font-size: 5rem;
+        font-weight: 700;
+      }
+    }
+  }
+}
+div.about {
+  position: relative;
+  height: 100vh;
+  background: hsl(256, 100%, 73%);
+  display: flex;
+  align-items: center;
+
+  div.about-text {
+    margin-top: -100px;
+    width: 60%;
+    padding: 0 100px;
+    h3 {
+      font-size: 5rem;
+      font-weight: 400;
+      color: white;
+      margin-bottom: 30px;
+    }
+    p {
+      font-size: 2rem;
+      color: white;
+    }
+  }
+  div.about-image {
+    width: 40%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
+div.prevent {
+  height: 100vh;
+  background-image: url("../images/background2.jpg");
+  background-size: cover;
+  background-position: center;
+
+  h2 {
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 50px;
+  }
+
+  div.prevent-todo {
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    
+
+    div {
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      align-items: center;
+      width: 25%;
+      height: 50%;
+      padding: 0 10px;
+
+      img {
+        max-width: 50%;
+      }
+
+      h3 {
+        font-size: 3rem;
+        text-align: center;
+      }
+
+      p{
+        font-size: 1.5rem;
+        text-align: center;
+      }
+    }
+  }
+}
+div.contact {
+  height: 100vh;
+  background: hsl(187, 100%, 73%);
+
+  h2 {
+    text-align: center;
+    font-size: 5rem;
+    padding-top: 50px;
+  }
+
+  div.contact-panel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-top: 50px;
+
+    div.doctor2 {
+      width: 30vw;
+      img {
+        max-width: 30vw;
+      }
+    }
+    div.form {
+      form {
+        width: 50vw;
+        box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.178);
+        display: flex;
+        flex-direction: column;
+        background: white;
+        padding: 10px;
+        border-radius: 10px;
+        input.inpt
+        {
+          font-size: 2.5rem;
+          border: none;
+          padding: 5px 20px;
+          margin-bottom: 10px;
+          border-radius: 10px;
+          background: rgba(206, 206, 206, 0.192);
+          outline: none;
+        }
+        textarea {
+          resize: none;
+          border: 1px solid rgba(206, 206, 206, 0.363);
+          outline: none;
+        }
+        input.btn {
+          border: none;
+          font-size: 3rem;
+          color: gray;
+          border-radius: 10px;
+          cursor: pointer;
+          margin-top: 1rem;
+        }
+      }
+    }
+  }
+}
+
+@keyframes virus {
+  0%{
+    transform: translate(-5vw,0) rotate(180deg);
+  }
+  25%{
+    transform: translate(90vw,0) rotate(-180deg);
+  }
+  50%{
+    transform: translate(90vw,90vh) rotate(180deg);
+  }
+  75%{
+    transform: translate(-5vw,90vh) rotate(-180deg);
+  }
+  100%{
+    transform: translate(-5vw,0) rotate(180deg);
+  }
+}
+@keyframes stayhome {
+  0% {
+    transform: rotate(-10deg);
+  }
+  50% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(-10deg);
+  }
+}
+
+@media (max-width:1150px){
+  div.about div.about-text h3 {
+    font-size: 4rem;
+  }
+  div.about div.about-text p {
+    font-size: 1.8rem;
+
+  }
+}
+@media (max-width:980px) {
+  header {
+    display: none;
+  }
+  div.main div.maincontent div.maintext {
+    margin-left: 0;
+    text-align: center;
+    position: absolute;
+    top: 5vh;
+    background: rgba(255, 255, 255, 0.377);
+  }
+  div.main div.maincontent div.stayhome img {
+    margin-top: 150px;
+  }
+  div.about {
+    position: relative;
+    flex-direction: column;
+  }
+  div.about div.about-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 2;
+    width: 100%;
+    padding: 0 100px;
+    text-align: center;
+  }
+  div.about div.about-text h3 {
+    font-weight: 600;
+  }
+  div.about div.about-text p {
+    font-size: 2rem;
+    text-shadow: 1px 1px 0 rgb(124, 124, 124);
+  }
+  div.about div.about-image {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+	  width: 50%;
+    opacity: 0.5;
+  }
+  div.prevent h2 {
+    text-align: center;
+    font-size: 4rem;
+    padding-top: 20px;
+  }
+  div.prevent div.prevent-todo {
+    flex-wrap: wrap;
+    align-items: flex-end;
+  }
+  div.prevent div.prevent-todo div {
+    width: 40%;
+    height: 40%;
+    padding: 0;
+  }
+  div.prevent div.prevent-todo div img {
+    max-width: 35%;
+  }
+}
+@media (max-width:600px){
+  div.about div.about-text {
+    top: 60%;
+  }
+  div.about div.about-text p {
+    font-size: 1.7rem;
+  }
+  div.prevent h2 {
+    font-size: 4rem;
+  }
+
+  div.prevent div.prevent-todo {
+    align-content: center;
+  }
+  div.prevent div.prevent-todo div {
+    width: 35%;
+    height: 30%;
+  }
+  div.prevent div.prevent-todo div h3 {
+    font-size: 2.5rem;
+  }
+  div.contact h2 {
+    font-size: 4rem;
+  }
+  div.contact div.contact-panel div.doctor2 {
+    display: none;
+  }
+  div.contact div.contact-panel div.form form {
+    width: 80vw;
+  }
+}
+@media (max-width:500px){
+  div.main div.maincontent div.maintext h3 {
+    font-size: 2.3rem;
+  }
+  div.main div.maincontent div.maintext h2 {
+    font-size: 3rem;
+  }
+  div.main div.maincontent div.stayhome img {
+    max-width: 80%;
+    margin: 0 auto;
+  }
+  div.about div.about-text h3 {
+    font-size: 3rem;
+  }
+  div.about div.about-text {
+    width: 130%;
+  }
+  div.prevent h2 {
+    font-size: 3rem;
+  }
+  div.prevent div.prevent-todo {
+    gap: 10px;
+  }
+  div.prevent div.prevent-todo div h3 {
+    font-size: 2rem;
+  }
+  div.prevent div.prevent-todo div {
+    width: 40%;
+  }
+  div.contact h2 {
+    font-size: 3rem;
+  }
+}

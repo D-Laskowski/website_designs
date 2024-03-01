@@ -1,0 +1,485 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: Montserrat, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+header {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  -webkit-box-shadow: 0 0 15px 0 black;
+          box-shadow: 0 0 15px 0 black;
+}
+
+header nav {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 20vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 50px;
+}
+
+header nav img {
+  -webkit-filter: invert(1);
+          filter: invert(1);
+  width: 40%;
+}
+
+header nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header nav ul li {
+  list-style: none;
+}
+
+header nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: white;
+  font-size: clamp(2.3rem, 2vw, 2vw);
+  letter-spacing: 0.5rem;
+  word-spacing: -0.5rem;
+  text-shadow: 1px 1px 1px black;
+}
+
+header nav ul li a:nth-of-type(1) {
+  margin-right: 50px;
+}
+
+header nav ul li a::before {
+  position: absolute;
+  content: "\02EF";
+  bottom: -50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 7rem;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 0;
+}
+
+header nav ul li a:hover::before {
+  opacity: 1;
+  -webkit-transform: translate(-50%, 20%);
+          transform: translate(-50%, 20%);
+}
+
+header button {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  padding: 15px;
+  background: none;
+  color: white;
+  border: none;
+  font-size: 3rem;
+  font-weight: 800;
+  cursor: pointer;
+  border: 3px solid white;
+}
+
+header button::before {
+  position: absolute;
+  content: "";
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  -webkit-transform: scaleY(0);
+          transform: scaleY(0);
+  -webkit-transform-origin: top;
+          transform-origin: top;
+  -webkit-transition: -webkit-transform 0.4s ease-in-out;
+  transition: -webkit-transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out;
+  transition: transform 0.4s ease-in-out, -webkit-transform 0.4s ease-in-out;
+  z-index: -1;
+}
+
+header button:hover::before {
+  -webkit-transform-origin: bottom;
+          transform-origin: bottom;
+  -webkit-transform: scaleY(1);
+          transform: scaleY(1);
+}
+
+header ul.contact {
+  position: absolute;
+  bottom: 5%;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header ul.contact li {
+  list-style: none;
+}
+
+header ul.contact li a {
+  text-decoration: none;
+  font-size: clamp(1.8rem, 1.9vw, 1.9vw);
+  color: white;
+  margin-right: 30px;
+  text-shadow: 1px 1px 1px black;
+}
+
+header ul.contact li a i {
+  margin-right: 10px;
+}
+
+header video {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  height: 100vh;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.routes {
+  height: 100vh;
+  background: url("../images/back.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+section.routes div.route {
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 10px;
+  margin: 0 10px;
+}
+
+section.routes div.route div {
+  position: relative;
+  border-radius: 5rem;
+  width: 20%;
+  height: 75%;
+  overflow: hidden;
+  -webkit-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+  border: 2px solid white;
+}
+
+section.routes div.route div:hover {
+  border-radius: 0px;
+}
+
+section.routes div.route div img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+section.routes div.route div div.route-text {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.routes div.route div div.route-text p {
+  color: white;
+  font-size: clamp(2rem, 2.5vw, 2.5vw);
+  margin-bottom: 2rem;
+  font-weight: 600;
+  text-shadow: 1px 1px 1px black;
+}
+
+section.routes div.route div div.route-text p.name {
+  margin-bottom: 20rem;
+}
+
+section.routes div.route div div.route-text p.length {
+  font-weight: 700;
+}
+
+section.routes div.route div div.route-text p.time {
+  font-weight: 700;
+}
+
+section.routes div.route div div.route-text p.difficulty {
+  font-weight: 500;
+}
+
+section.about {
+  background: url("../images/back.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+}
+
+section.about div.about-section {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 50vh 50vh 50vh 50vh 10vh;
+      grid-template-rows: 50vh 50vh 50vh 50vh 10vh;
+  padding-top: 50px;
+}
+
+section.about div.about-section div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+section.about div.about-section div video {
+  margin: 10px;
+  height: 100%;
+  width: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5rem;
+  border: 1px solid white;
+}
+
+section.about div.about-section div p {
+  border-radius: 1rem;
+  color: white;
+  padding: 10px;
+  width: 50%;
+  font-size: clamp(1.5rem, 1.3vw, 1.3vw);
+  text-shadow: 1px 1px 1px black;
+  background: rgba(0, 0, 0, 0.185);
+}
+
+section.about div.totop {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+section.about div.totop a.top {
+  color: white;
+  text-decoration: none;
+  font-size: 6rem;
+  margin: 0 1rem 1rem 0;
+}
+
+h2.title {
+  font-weight: 400;
+  position: relative;
+  font-size: clamp(3rem, 3.3vw, 3.3vw);
+  text-align: center;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+  text-decoration: underline;
+  color: white;
+  text-shadow: 1px 1px 1px black;
+}
+
+h2.title::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  height: 2px;
+  width: 35%;
+  background-color: white;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+h2.title::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: 0;
+  height: 2px;
+  width: 35%;
+  background-color: white;
+  -webkit-transition: all 0.3s linear;
+  transition: all 0.3s linear;
+}
+
+h2.title:hover {
+  letter-spacing: 0.3rem;
+}
+
+h2.title:hover::before, h2.title:hover::after {
+  width: 0;
+}
+
+@media (max-width: 1200px) {
+  header nav ul li a {
+    letter-spacing: 0;
+    word-spacing: 0;
+  }
+  header ul.contact li a {
+    margin-right: 20rem;
+  }
+}
+
+@media (max-width: 768px) {
+  header nav {
+    padding: 0 10px;
+  }
+  header nav img {
+    width: 50%;
+  }
+  header ul.contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    bottom: 15%;
+    width: 100%;
+  }
+  header ul.contact li {
+    margin-top: 40px;
+    text-align: center;
+  }
+  header ul.contact li a {
+    display: block;
+    margin-right: 0;
+  }
+  h2.title::before, h2.title::after {
+    width: 30%;
+  }
+  section.about div.about-section {
+    -ms-grid-rows: 80vw 80vw 80vw 80vw 10vw;
+        grid-template-rows: 80vw 80vw 80vw 80vw 10vw;
+  }
+}
+
+@media (max-width: 576px) {
+  header nav ul {
+    display: none;
+  }
+  header nav img {
+    width: 100%;
+  }
+  h2.title::before, h2.title::after {
+    width: 15%;
+  }
+  section.routes div.route {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    padding: 20px 0 60px 0;
+  }
+  section.routes div.route div {
+    border-radius: 0;
+    width: 100%;
+    height: 100%;
+  }
+  section.routes div.route div div.route-text {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  section.routes div.route div div.route-text p.name {
+    margin-bottom: 20px;
+  }
+  section.routes div.route div div.route-text p {
+    margin-right: 20px;
+  }
+  section.about div.about-section {
+    -ms-grid-rows: 110vw 110vw 110vw 110vw 10vw;
+        grid-template-rows: 110vw 110vw 110vw 110vw 10vw;
+    padding-top: 0;
+  }
+  section.about div.about-section div {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  section.about div.about-section div video {
+    height: auto;
+    width: 90%;
+  }
+  section.about div.about-section div p {
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  section.about div.about-section {
+    -ms-grid-rows: 130vw 130vw 130vw 130vw 10vw;
+        grid-template-rows: 130vw 130vw 130vw 130vw 10vw;
+  }
+}
+
+@media (max-width: 380px) {
+  section.about div.about-section {
+    -ms-grid-rows: 180vw 180vw 180vw 180vw 10vw;
+        grid-template-rows: 180vw 180vw 180vw 180vw 10vw;
+  }
+}
+/*# sourceMappingURL=style.css.map */
