@@ -17,7 +17,7 @@ header {
   height: 100vh;
   width: 100%;
   position: relative;
-  box-shadow: 0 0 15px 0 black;
+  background-color: rgba(0, 0, 0, 0.50);
   nav {
     position: fixed;
     inset: 0;
@@ -27,9 +27,9 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 0 50px;
-    img {
+    a img {
       filter: invert(1);
-      width: 40%;
+      max-width: 90%;
     }
 
     ul {
@@ -71,7 +71,7 @@ header {
     }
   }
 
-  button {
+  button.header-reservation {
     position: relative;
     top: 50%;
     left: 50%;
@@ -104,7 +104,7 @@ header {
     }
   }
 
-  ul.contact {
+  ul.header-contact {
     position: absolute;
     bottom: 5%;
     left: 50%;
@@ -139,7 +139,9 @@ header {
 
 section.routes {
   height: 100vh;
-  background: url("../images/back.jpg");
+  padding-top: 5rem;
+  background: url("../assets/images/back.jpg") rgba(0, 0, 0, 0.75);
+  background-blend-mode: multiply;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -149,30 +151,32 @@ section.routes {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-    margin: 0 10px;
- 
+    gap: 20px;
+    margin-inline: 10rem;
 
+ 
     div {
       position: relative;
-      border-radius: 5rem;
       width: 20%;
       height: 75%;
       overflow: hidden;
       transition: all 0.2s linear;
-      border: 2px solid white;
+      background-color: rgba(0, 0, 0, 0.25);
+      cursor: pointer;
+      transition: all 0.2s ease-out;
 
       &:hover {
-        border-radius: 0px;
+        transform: scale(1.1);
+        z-index: 99;
       }
-      
+
       img {
         width: 100%;
         height: 100%;
         object-fit: cover;
       }
 
-      div.route-text {
+      div.route-description {
         position: absolute;
         inset: 0;
         width: 100%;
@@ -183,32 +187,27 @@ section.routes {
         align-items: center;
         p {
           color: white;
-          font-size: clamp(2rem, 2.5vw, 2.5vw);
+          font-size: clamp(1.2vw, 1.2vw, 1.5vw);
           margin-bottom: 2rem;
           font-weight: 600;
           text-shadow: 1px 1px 1px black;
         }
   
-        p.name {
+        p.route-description-name {
           margin-bottom: 20rem;
         }
-        p.length {
-          font-weight: 700;
+        p.route-description-length {
         }
-        p.time {
-          font-weight: 700;
-        }
-        p.difficulty {
-          font-weight: 500;
-        }
-  
+        p.route-description-time {
+        }  
       }
     }
   }
 }
 
 section.about{
-  background: url("../images/back.jpg");
+  background: url("../assets/images/back.jpg") rgba(0, 0, 0, 0.75);
+  background-blend-mode: multiply;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
@@ -218,6 +217,7 @@ section.about{
     grid-template-columns: 1fr;
     grid-template-rows: 50vh 50vh 50vh 50vh 10vh;
     padding-top: 50px;
+    margin-inline: 10rem;
 
     div {
       display: flex;
@@ -225,22 +225,19 @@ section.about{
       align-items: center;
       video {
         margin: 10px;
-        height: 100%;
-        width: 50%;
+        height: auto;
+        width: 49%;
         object-fit: cover;
-        border-radius: 5rem;
-        border: 1px solid white;
-
+        border-radius: 1rem;
       }
 
       p {
-        border-radius: 1rem;
+        font-weight: 500;
         color: white;
         padding: 10px;
         width: 50%;
-        font-size: clamp(1.5rem, 1.3vw, 1.3vw);
+        font-size: clamp(1.3vw, 1.3vw, 1.3vw);
         text-shadow: 1px 1px 1px black;
-        background: rgba(0, 0, 0, 0.185);
       }
     }
   }
@@ -251,7 +248,7 @@ section.about{
     a.top {
       color: white;
       text-decoration: none;
-      font-size: 6rem;
+      font-size: 3rem;
       margin: 0 1rem 1rem 0;
     }
   }
@@ -263,7 +260,6 @@ h2.title {
   font-size: clamp(3rem, 3.3vw, 3.3vw);
   text-align: center;
   transition: all 0.3s linear;
-  text-decoration: underline;
   color:white;
   text-shadow: 1px 1px 1px black;
 
@@ -288,9 +284,6 @@ h2.title {
     transition: all 0.3s linear;
   }
 
-  &:hover {
-    letter-spacing: 0.3rem;
-  }
 
   &:hover::before, &:hover::after {
     width: 0;
@@ -303,8 +296,15 @@ h2.title {
     word-spacing: 0;
   }
 
-  header ul.contact li a {
+  header ul.header-contact li a {
     margin-right: 20rem;
+  }
+  section.routes div.route div div.route-description p.route-description-name {
+    font-size: 2vw;
+  }
+
+  section.about div.about-section div.about-section-element p {
+    font-size: 1.5vw;
   }
 }
 
@@ -316,25 +316,61 @@ h2.title {
   header nav img {
     width: 50%;
   }
-  header ul.contact {
+  header ul.header-contact {
     display: flex;
     flex-direction: column;
     bottom: 15%;
     width: 100%;
   }
-  header ul.contact li {
+  header ul.header-contact li {
     margin-top: 40px;
     text-align: center;
   }
-  header ul.contact li a {
+  header ul.header-contact li a {
     display: block;
     margin-right: 0;
   }
+
+  section.routes div.route {
+    flex-direction: column;
+    padding: 20px 0 60px 0;
+   }
+   section.routes div.route div {
+     border-radius: 0;
+     width: 100%;
+     height: 100%;
+   }
+   section.routes div.route div div.route-description {
+     position: absolute;
+     inset: 0;
+     width: 100%;
+     height: 100%;
+     display: flex;
+     flex-direction: row;
+     justify-content: space-around;
+
+     &:hover {
+      transform: scale(1);
+    }
+   }
+   section.routes div.route div div.route-description p.route-description-name {
+     margin-bottom: 20px;
+     font-size: 4vw;
+   }
+   section.routes div.route div div.route-description p {
+     margin-right: 20px;
+     font-size: 2.2vw;
+   }
+
   h2.title::before, h2.title::after {
-     width: 30%;
+     width: 30vw;
   }
   section.about div.about-section {
     grid-template-rows: 80vw 80vw 80vw 80vw 10vw;
+  }
+
+  section.about div.about-section {
+    grid-template-rows: 1fr 1fr 1fr 1fr;
   }
 }
 
@@ -347,54 +383,21 @@ h2.title {
   }
   h2.title::before, h2.title::after {
     width: 15%;
- }
- section.routes div.route {
-   flex-direction: column;
-   padding: 20px 0 60px 0;
   }
-  section.routes div.route div {
-    border-radius: 0;
-    width: 100%;
-    height: 100%;
-  }
-  section.routes div.route div div.route-text {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-  }
-  section.routes div.route div div.route-text p.name {
-    margin-bottom: 20px;
-  }
-  section.routes div.route div div.route-text p {
-    margin-right: 20px;
+  section.routes div.route {
+    margin-inline: 3rem;
   }
   section.about div.about-section {
-    grid-template-rows: 110vw 110vw 110vw 110vw 10vw;
-    padding-top: 0;
+    margin-inline: 0;
   }
   section.about div.about-section div {
-    flex-direction: column;
+    margin-inline: 3rem;
   }
   section.about div.about-section div video {
-    height: auto;
-    width: 90%;
+    display: none;
   }
-  section.about div.about-section div p {
-    width: 90%;
-  }
-}
-
-@media (max-width:480px){
-  section.about div.about-section {
-    grid-template-rows: 130vw 130vw 130vw 130vw 10vw;
-  }
-}
-
-@media (max-width:380px){
-  section.about div.about-section {
-    grid-template-rows: 180vw 180vw 180vw 180vw 10vw;
+  section.about div.about-section div.about-section-element p {
+    font-size: 2.5vw;
+    width: 90vw;
   }
 }

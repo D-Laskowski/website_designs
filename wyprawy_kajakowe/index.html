@@ -1,106 +1,101 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wyprawy Kajakowe</title>
     <link rel="stylesheet" href="css/style.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/ScrollTrigger.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
 </head>
-
 <body>
-
+    <!-- Header -->
     <header>
+        <!-- Navigation -->
         <nav>
-            <img src="images/wyprawy-logo.png">
-
+            <a href="#"><img src="assets/images/wyprawy-logo.png" alt="Logo" loading="lazy"></a>
             <ul>
                 <li><a href="#routes">Nasze trasy</a></li>
                 <li><a href="#about">O nas</a></li>
             </ul>
         </nav>
-        <button>Zarezerwuj online!</button>
-        <video src="video/header.mp4" autoplay  muted loop type="video/mp4"></video>
-        <ul class="contact">
+        <button class="header-reservation">Zarezerwuj online!</button>
+        <video src="assets/video/header.mp4" autoplay  muted loop playsinline type="video/mp4"></video>
+        <ul class="header-contact">
             <li><a href="mailto:contact@kajakowewyprawy.pl"><i class="far fa-envelope"></i>contact@kajakowewyprawy.pl</a></li>
-            <li><a href="tel:733282139"><i class="fas fa-phone-alt"></i>733 282 139</a></li>
+            <li><a href="tel:733282139"><i class="fas fa-phone-alt"></i>123 456 789</a></li>
         </ul>
     </header>
 
+    <!-- Routes Section -->
     <section class="routes" id="routes">
-        <h2 class="title title_routes">Nasze trasy</h2>
+        <h2 class="title">Nasze trasy</h2>
         <div class="route">
             <div>
-                <img src="images/route1.jpg">
-                <div class="route-text">
-                    <p class="name">Trasa 1</p>
-                    <p class="length">20km</p>
-                    <p class="time">1:00h</p>
-                    <p class="difficulty">Średnia</p>
+                <img src="assets/images/route1.jpg" alt="Trasa 1" loading="lazy">
+                <div class="route-description">
+                    <p class="route-description-name">Trasa 1</p>
+                    <p class="route-description-length">Długość: 20km</p>
+                    <p class="route-description-time">Czas przeprawy: 1:00h</p>
                 </div>
             </div>
             <div>
-                <img src="images/route2.jpg">
-                <div class="route-text">
-                    <p class="name">Trasa 2</p>
-                    <p class="length">12km</p>
-                    <p class="time">0:45h</p>
-                    <p class="difficulty">Łatwa</p>
+                <img src="assets/images/route2.jpg" alt="Trasa 2" loading="lazy">
+                <div class="route-description">
+                    <p class="route-description-name">Trasa 2</p>
+                    <p class="route-description-length">Długość: 12km</p>
+                    <p class="route-description-time">Czas przeprawy: 0:45h</p>
                 </div>
             </div>
             <div>
-                <img src="images/route3.jpg">
-                <div class="route-text">
-                    <p class="name">Trasa 3</p>
-                    <p class="length">23km</p>
-                    <p class="time">1:40h</p>
-                    <p class="difficulty">Łatwa</p>
+                <img src="assets/images/route3.jpg"  alt="Trasa 3" loading="lazy">
+                <div class="route-description">
+                    <p class="route-description-name">Trasa 3</p>
+                    <p class="route-description-length">Długość: 23km</p>
+                    <p class="route-description-time">Czas przeprawy: 1:40h</p>
                 </div>
             </div>
             <div>
-                <img src="images/route4.jpg">
-                <div class="route-text">
-                    <p class="name">Trasa 4</p>
-                    <p class="length">31km</p>
-                    <p class="time">2:40h</p>
-                    <p class="difficulty">Trudna</p>
+                <img src="assets/images/route4.jpg" alt="Trasa 4" loading="lazy">
+                <div class="route-description">
+                    <p class="route-description-name">Trasa 4</p>
+                    <p class="route-description-length">Długość: 31km</p>
+                    <p class="route-description-time">Czas przeprawy: 2:40h</p>
                 </div>
             </div>
             <div>
-                <img src="images/route5.jpg">
-                <div class="route-text">
-                    <p class="name">Trasa 5</p>
-                    <p class="length">28km</p>
-                    <p class="time">210h</p>
-                    <p class="difficulty">Trudna</p>
+                <img src="assets/images/route5.jpg" alt="Trasa 5" loading="lazy">
+                <div class="route-description">
+                    <p class="route-description-name">Trasa 5</p>
+                    <p class="route-description-length">Długość: 28km</p>
+                    <p class="route-description-time">Czas przeprawy: 210h</p>
                 </div>
             </div>
         </div>
     </section>
 
+    <!-- About Section -->
     <section class="about" id="about">
         <h2 class="title">O nas</h2>
-
         <div class="about-section">
             <div class="about-section-element">
-                <video src="video/About1.mp4" autoplay  muted loop type="video/mp4"></video>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quis velit, necessitatibus suscipit nostrum cumque error vitae sint sed, dignissimos beatae quia ex dolor? Ex incidunt iusto fugit sapiente nobis maxime necessitatibus voluptatibus, reiciendis aspernatur voluptas rerum minima vitae modi, numquam, quod ut ducimus veritatis ad similique! Magnam, incidunt laudantium modi accusamus voluptate quae consequuntur porro tenetur laborum quia ex tempore est a ducimus maiores nihil quidem eum ipsum hic dolore quasi id provident illum beatae.</p>
+                <video src="assets/video/About1.mp4" autoplay  muted loop playsinline type="video/mp4"></video>
+                <p>Firma "Wyprawy Kajakowe" oferuje niepowtarzalną możliwość aktywnego spędzania czasu na łonie natury, wypożyczając kajaki turystyczne i rekreacyjne. Zlokalizowana w malowniczej okolicy, otoczonej licznymi jeziorami i rzekami, stanowi doskonałą bazę wypadową dla miłośników kajakarstwa. Misją firmy jest propagowanie zdrowego stylu życia i umożliwienie klientom odkrywania piękna lokalnych akwenów w sposób bezpieczny i ekologiczny. </p>
             </div>
             <div class="about-section-element">
-                <p>Ex incidunt iusto fugit sapiente nobis maxime necessitatibus voluptatibus, reiciendis aspernatur voluptas rerum minima vitae modi, numquam, quod ut ducimus veritatis ad similique! Magnam, incidunt laudantium modi accusamus voluptate quae consequuntur porro tenetur laborum quia ex tempore est a ducimus maiores nihil quidem eum ipsum hic dolore quasi id provident illum beatae. Culpa officia voluptas, tempore perferendis sed cupiditate ullam aliquid sit dolor nemo vel temporibus iste iusto qui aliquam voluptatum, assumenda fugit maxime error ipsum.</p>
-                <video src="video/About2.mp4" autoplay  muted loop type="video/mp4"></video>
+                <p>Wykwalifikowana kadra instruktorów i doświadczonych kajakarzy zapewnia profesjonalne przygotowanie i instruktaż, dzięki czemu nawet początkujący mogą cieszyć się pełnią przygody na wodzie. "Wyprawy Kajakowe" oferuje szeroki wybór sprzętu, dostosowany do różnych preferencji i poziomów zaawansowania.Dodatkowo, firma udostępnia niezbędny sprzęt wodoodporny, kamizelki ratunkowe oraz mapy i przewodniki, umożliwiając bezpieczną i komfortową przygodę.</p>
+                <video src="assets/video/About2.mp4" autoplay  muted loop playsinline type="video/mp4"></video>
             </div>
             <div class="about-section-element">
-                <video src="video/About3.mp4" autoplay  muted loop type="video/mp4"></video>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut quis velit, necessitatibus suscipit nostrum cumque error vitae sint sed, dignissimos beatae quia ex dolor? Ex incidunt iusto fugit sapiente nobis maxime necessitatibus voluptatibus, reiciendis aspernatur voluptas rerum minima vitae modi, numquam, quod ut ducimus veritatis ad similique! Culpa officia voluptas, tempore perferendis sed cupiditate ullam aliquid sit dolor nemo vel temporibus iste iusto qui aliquam voluptatum, assumenda fugit maxime error ipsum.</p>
+                <video src="assets/video/About3.mp4" autoplay  muted loop playsinline type="video/mp4"></video>
+                <p>Trasy są starannie wybierane, aby zapewnić uczestnikom niezapomniane wrażenia i kontakt z nietkniętą przyrodą. Kajaki płyną wśród malowniczych brzegów, otoczonych lasami, łąkami i dziką roślinnością, oferując możliwość obserwacji różnorodnej fauny i flory.</p>
             </div>
             <div class="about-section-element">
-                <p>Magnam, incidunt laudantium modi accusamus voluptate quae consequuntur porro tenetur laborum quia ex tempore est a ducimus maiores nihil quidem eum ipsum hic dolore quasi id provident illum beatae. Culpa officia voluptas, tempore perferendis sed cupiditate ullam aliquid sit dolor nemo vel temporibus iste iusto qui aliquam voluptatum, assumenda fugit maxime error ipsum.</p>
-                <video src="video/About4.mp4" autoplay  muted loop type="video/mp"></video>
+                <p>Dla tych, którzy pragną czegoś więcej niż tylko spływu, "Wyprawy Kajakowe" organizuje także obozy kajakowe, połączone z biwakowaniem i ogniskami. To idealna okazja, aby na chwilę oderwać się od zgiełku codziennego życia i zanurzyć się w pięknie natury. Niezależnie od wyboru, firma gwarantuje niezapomniane przeżycia i możliwość aktywnego spędzania czasu na łonie przyrody.</p>
+                <video src="assets/video/About4.mp4" autoplay  muted loop playsinline type="video/mp"></video>
             </div>
         </div>
         <div class="totop">
