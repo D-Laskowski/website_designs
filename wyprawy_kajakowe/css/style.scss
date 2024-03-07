@@ -17,11 +17,8 @@ header {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: url("../assets/video/poster.jpg") rgba(0, 0, 0, 0.50);
-  background-blend-mode: multiply;
-  background-attachment: fixed;
-  background-position: center;
-  background-size: cover;
+  background: rgba(0, 0, 0, 0.50);
+
   nav {
     position: fixed;
     inset: 0;
@@ -165,7 +162,7 @@ section.routes {
       height: 75%;
       overflow: hidden;
       transition: all 0.2s linear;
-      background-color: rgba(0, 0, 0, 0.25);
+      background-color: rgba(0, 0, 0, 0.15);
       cursor: pointer;
       transition: all 0.2s ease-out;
 
@@ -255,7 +252,7 @@ section.about{
 }
 
 h2.title {
-  font-weight: 400;
+  font-weight: 500;
   position: relative;
   font-size: clamp(3rem, 3.3vw, 3.3vw);
   text-align: center;
