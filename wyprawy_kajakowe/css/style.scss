@@ -17,7 +17,11 @@ header {
   height: 100vh;
   width: 100%;
   position: relative;
-  background-color: rgba(0, 0, 0, 0.50);
+  background-color: url("../assets/video/poster.jpg") rgba(0, 0, 0, 0.50);
+  background-blend-mode: multiply;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
   nav {
     position: fixed;
     inset: 0;
