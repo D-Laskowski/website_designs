@@ -1,8 +1,8 @@
-@import url("https://fonts.googleapis.com/css2?family=Lora:wght@200;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap");
 * {
   margin: 0;
   padding: 0;
-  font-family: "Brush Script MT", cursive;
+  font-family: "Shadows Into Light", cursive;
   box-sizing: border-box;
 }
 
@@ -15,30 +15,23 @@ header ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  background: rgba(3, 3, 3, 0.747);
+  background: rgba(0, 0, 0, 0.9);
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   z-index: 1000;
-  height: 12vh;
-  border-bottom: 1px solid white;
+  height: 5rem;
+  -webkit-backdrop-filter: blur(10rem);
+          backdrop-filter: blur(10rem);
 }
 header ul img {
-  max-width: 17%;
-  margin-right: 15vw;
-  margin-left: -7vw;
-}
-header ul i.arrow {
-  font-size: 2em;
-  color: white;
-  margin: 0;
-}
-header ul i.arrow:nth-of-type(2) {
-  margin-right: 10px;
-}
-header ul i.arrow:nth-of-type(3) {
-  margin-left: 10px;
+  max-width: 10rem;
+  height: auto;
+  margin-top: 4rem;
+  margin-right: 50vw;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 100%;
 }
 header ul li {
   list-style: none;
@@ -54,9 +47,8 @@ header ul li a {
   text-decoration: none;
   color: white;
   font-size: 2.7vw;
-  font-weight: 100;
   transform-origin: right;
-  transition: all 0.8s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 header ul li a:hover {
   color: white;
@@ -68,7 +60,7 @@ header ul li a::after {
   position: absolute;
   bottom: 0;
   left: 0;
-  height: 5px;
+  height: 1px;
   width: 100%;
   background-color: white;
   box-shadow: 0 0px 20px white, 0 0px 40px white;
@@ -108,32 +100,32 @@ header div.headcontent div.about {
 header div.headcontent div.about img.logo {
   display: block;
   max-width: 60%;
+  animation: burger-anim 2.5s infinite alternate;
 }
 header div.headcontent div.about p {
   color: white;
   text-shadow: 1px 1px 0 black;
-  font-size: 1.3rem;
+  font-size: 1.6rem;
 }
 header div.headcontent div.about button {
   display: block;
   margin-top: 50px;
-  font-weight: 500;
-  font-size: 1.5em;
+  font-size: 1.75em;
   background: transparent;
-  border: 6px solid;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(120deg, red, orange);
+  -webkit-backdrop-filter: blur(1rem);
+          backdrop-filter: blur(1rem);
+  border-radius: 1rem;
   color: white;
   padding: 20px 30px;
   text-transform: uppercase;
-  transition: all 0.5s;
+  transition: all 0.7s ease-in-out;
 }
 header div.headcontent div.about button:hover {
-  text-shadow: 0 0 5px white;
+  background-color: white;
+  color: black;
 }
-header div.headcontent img {
-  max-width: 25%;
-  animation: burger-anim 1.5s infinite alternate;
+header div.headcontent img.burger-icon {
+  max-width: 50vw;
 }
 
 div.content {
@@ -161,7 +153,7 @@ div.content div.gallery img:hover {
   transform: scale(1.1);
 }
 div.content div.contact {
-  background: url("../images/inside.jpg");
+  background: url("../assets/images/inside.jpg");
   background-position: center;
   background-size: cover;
   background-attachment: fixed;
@@ -173,7 +165,7 @@ div.content div.contact div.contact-delivery {
 div.content div.contact div.contact-delivery img {
   margin-top: 100px;
   max-width: 30%;
-  filter: invert(1);
+  filter: invert(1) grayscale(100%);
   transition: all 1s ease-in;
 }
 div.content div.contact div.contact-text {
@@ -199,6 +191,7 @@ div.content div.contact div.contact-text h3 {
   text-transform: uppercase;
   background-color: red;
   border-radius: 20px;
+  width: 30rem;
 }
 div.content div.contact div.contact-text h3 i {
   margin-right: 10px;
@@ -265,16 +258,10 @@ footer div.social a:hover {
 
 @keyframes burger-anim {
   0% {
-    filter: drop-shadow(0 0 5px red);
-  }
-  33% {
-    filter: drop-shadow(0 0 10px red);
-  }
-  66% {
-    filter: drop-shadow(0 0 15px red);
+    filter: drop-shadow(2px 0 0 red);
   }
   100% {
-    filter: drop-shadow(0 0 20px red);
+    filter: drop-shadow(6px 0 0px red);
   }
 }
 /* @media (max-width:1024px){
@@ -566,4 +553,4 @@ footer div.social a {
   div.content {
     grid-auto-rows: 150vh 190vh;
   }
-}/*# sourceMappingURL=main.css.map */
+}/*# sourceMappingURL=style.css.map */
