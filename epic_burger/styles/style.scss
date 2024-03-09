@@ -26,13 +26,16 @@ header {
     height: 5rem;
     backdrop-filter: blur(10rem);
 
-    img {
-      max-width: 10rem;
-      height: auto;
+    a.home-link {
+      border: 2px solid white;
+      width: auto;
       margin-top: 4rem;
       margin-right: 50vw;
-      background-color: rgba(0, 0, 0, 0.8);
       border-radius: 100%;
+      img {
+        background-color: rgba(0, 0, 0, 0.8);
+        border-radius: 100%;
+      }
     }
 
     li {

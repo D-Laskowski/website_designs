@@ -25,11 +25,14 @@ header ul {
   -webkit-backdrop-filter: blur(10rem);
           backdrop-filter: blur(10rem);
 }
-header ul img {
-  max-width: 10rem;
-  height: auto;
+header ul a.home-link {
+  border: 2px solid white;
+  width: auto;
   margin-top: 4rem;
   margin-right: 50vw;
+  border-radius: 100%;
+}
+header ul a.home-link img {
   background-color: rgba(0, 0, 0, 0.8);
   border-radius: 100%;
 }
