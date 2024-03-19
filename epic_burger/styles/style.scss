@@ -298,242 +298,34 @@ footer {
   }
 }
 
-/* @media (max-width:1024px){
-
-
-  header ul li a {
-    font-size: 3rem;
-  }
-  header div.headcontent div.about img.logo {
-    display: block;
-    max-width: 90%;
-  }
-  header div.headcontent div.about p {
-    font-size: 1.8rem;
-  }
-  header div.headcontent div.about button {
-    margin-top: 20px;
-    font-size: 2em;
-  }
-  header div.headcontent img {
-    max-width: 30%;
-  }
-  div.content {
-    grid-auto-rows: 100vh 160vh;
-  }
-  div.content div.contact div.contact-delivery img {
-    margin-top: 50px;
-    max-width: 300px;
-  }
-  div.content div.contact div.contact-text h2 {
-    font-size: 3rem;
-  }
-  div.content div.contact div.contact-text h3 {
-    display: none;
-  }
-  div.content div.contact div.contact-cards {
-    flex-direction: column;
-  
-  }
-  div.content div.contact div.contact-cards div {
-    padding: 10px;
-    margin: 10px;
-    width: 60%;
-    margin: 5px auto;
-  }
-  div.content div.contact div.contact-cards div h3 {
-    font-size: 2.5rem;
-    font-weight: 600;
-  }
-  div.content div.contact div.contact-cards div p {
-    font-size: 1.9rem;
-  }
-  div.content div.contact div.contact-cards div p:first-of-type {
-    font-size: 2rem;
-    font-weight: 500;
-  }
-  div.content div.contact div.contact-cards div h4 {
-    font-size: 2.3rem;
-  }
-}
-@media (max-width:790px){
-  header ul li a {
-    font-size: 4rem;
-  }
-  header div.headcontent div.about {
-    width: 100%;
-  }
-  header div.headcontent div.about img.logo {
-    margin: 0 auto;
-    max-width: 70%;
-  }
-  header div.headcontent div.about p {
-    font-size: 2.5rem;
-    padding:0 30px;
-    margin-bottom: 30px;
-  }
-  header div.headcontent div.about button {
-    font-size: 3em;
-    margin: 0 auto;
-  }
-  header div.headcontent img {
-    display: none;
-  }
-  div.content {
-    grid-auto-rows: 165vh 90vh;
-  }
-  div.content div.gallery {
-    grid-template-columns: 45vw 45vw;
-  }
-  div.content div.contact div.contact-delivery img {
-    display: none;
-  }
-  div.content div.contact div.contact-text h2 {
-    display: none;
-  }
-  div.content div.contact div.contact-cards div {
-    width: 90%;
-  }
-  div.content div.contact div.contact-cards div h3 {
-    font-size: 3.5rem;
-  }
-  div.content div.contact div.contact-cards div p {
-    font-size: 2.5rem;
-  }
-  div.content div.contact div.contact-cards div p:first-of-type {
-    font-size: 2.2rem;
-    font-weight: 500;
-  }
-  div.content div.contact div.contact-cards div h4 {
-    font-size: 3rem;
-  }
-  footer p {
-    font-size: 3rem;
-    margin-bottom: 30px;
-  }
-  footer div.social a {
-    font-size: 10rem;
-  }
-}
-@media (max-width:500px){
-  header ul i.arrow {
-    display: none;
-  }
-  header ul {
-    display: flex;
-    flex-direction: column;
-    background: black;
-    position: relative;
-    margin-bottom: 0;
-    height: 25vh;
-  }
-  header ul li {
-    margin-right: 0;
-    padding: 0;
-  }
-  header ul li a {
-    font-size: 7rem;
-    padding: 0 10px;
-    text-transform: initial;
-  }
-  header div.carousel img {
-    height: 60vh;
-  }
-  header div.headcontent div.about img.logo {
-    margin: 0 auto;
-    margin-top: 50px;
-    max-width: 60%;
-  }
-  header div.headcontent div.about p {
-    font-size: 3rem;
-  }
-  div.content {
-    grid-auto-rows: 110vh 70vh;
-  }
-  div.content div.contact div.contact-cards div {
-    width: 95%;
-  }
-  div.content div.contact div.contact-cards div h3 {
-    font-size: 4.5rem;
-  }
-  div.content div.contact div.contact-cards div p {
-    font-size: 3rem;
-  }
-  div.content div.contact div.contact-cards div p:first-of-type {
-    font-size: 3.5rem;
-  }
-  div.content div.contact div.contact-cards div h4 {
-    font-size: 4rem;
-  }
-  footer p {
-	font-size: 5rem;
-	margin-bottom: 30px;
-  }
-footer div.social a {
-	font-size: 15rem;
-  }
-}
-@media (max-width:380px){
-  header div.carousel img {
-    height: 50vh;
-  }
-  header div.headcontent div.about img.logo {
-
-    margin-top: 0;
-    max-width: 60%;
-  }
-  header div.headcontent div.about button {
-    font-size: 4.5em;
-    padding: 10px 15px;
-  }
-  div.content {
-    grid-auto-rows: 85vh 60vh;
-  }
-} */
-
-
 @media (max-width:1024px){
-  header ul img {
+  header ul a.home-link {
     max-width: 25%;
     margin-right: 5vw;
     margin-left: 0vw;
   }
 
-  header ul i.arrow {
-    display: none;
+  header div.headcontent {
+    left: 2rem;
   }
-
-  header div.headcontent div.about p {
-    font-size: 1.1rem;
-  }
-
-  div.content {
- grid-auto-rows: 150vh 220vh;
-  }
-  div.content div.contact div.contact-cards {
-    flex-direction: column;
-    gap: 10px;
-  }
-  div.content div.contact div.contact-cards div {
-    padding: 20px;
-    width: 90%;
-    margin: 0 auto;
-  }
-
 }
 
 @media (max-width:768px){
-  header ul img {
+
+  header ul a.home-link {
     display: none;
   }
   header ul li a {
-    font-size: 4.9vw;
+    font-size: 3rem;
+  }
+  header div.headcontent {
+    left: 0;
   }
   header div.headcontent img {
     display: none;
   }
   header div.headcontent div.about {
-    width: 90%;
+    width: 90vw;
   }
   header div.headcontent div.about img.logo {
     margin: 0 auto;
@@ -542,24 +334,20 @@ footer div.social a {
     display: block;
     margin: 0 auto;
   }
-  header div.headcontent div.about p {
-    font-size: 3vw;
-  }
 }
 
-@media (max-width:380px){
+@media (max-width:400px){
   header ul {
     height: 25vh;
     flex-direction: column;
     position: absolute;
-    background: black;
   }
   header ul li {
     margin-right: 0;
     padding: 4px 0;
   }
   header ul li a {
-    font-size: 8vw;
+    font-size: 2.3rem;
   }
 
   header div.headcontent div.about {
@@ -572,32 +360,42 @@ footer div.social a {
     margin-top: 70px;
   }
   header div.headcontent div.about p {
-    font-size: 4vw;
+    font-size: 1.25rem;
   }
   header div.headcontent div.about button {
     margin-top: 0;
     padding: 10px;
   }
   div.content div.gallery {
-    grid-template-columns: 45vw 45vw;
-    grid-template-rows: 15% 25% 15% 25% 15%;
-    gap: 10px;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 1px;
+
+    img {
+      border-radius: 0;
+    }
   }
+
+  div.content div.contact {
+    max-width: 100vw;
+    height: 235vh;
+  }
+
   div.content div.contact div.contact-delivery img {
     display: none;
   }
 
-  div.content div.contact div.contact-text h2 {
-    font-size: 9vw;
-  }
-
   div.content div.contact div.contact-text h3 {
-    margin: 7px;
-    padding: 10px 0;
-    font-size: 1.5em;
+    width: 90vw;
   }
 
-  div.content {
-    grid-auto-rows: 150vh 190vh;
+  div.content div.contact div.contact-cards {
+    flex-direction: column;
+    width: 90vw;
+    margin: 0 auto;
+  }
+
+  footer {
+    margin-top: 15rem;
   }
 }
