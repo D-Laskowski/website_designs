@@ -1,16 +1,16 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Andika:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: Montserrat, sans-serif;
+  font-family: "Andika", sans-serif;
 }
 
 html {
   scroll-behavior: smooth;
   font-size: 62.5%;
   overflow-x: hidden;
-  color: grey;
+  color: DimGrey;
 }
 
 header {
@@ -19,17 +19,18 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height: 10vh;
+  height: 8rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background: white;
-  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.507);
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 header h1 {
   font-size: 4rem;
   margin-left: 2rem;
-  color: grey;
+  color: #FF898B;
+  text-shadow: 1px 1px 0 #c26669;
 }
 header ul {
   display: flex;
@@ -40,7 +41,7 @@ header ul li {
 header ul li a {
   padding: 10px 15px;
   text-decoration: none;
-  color: grey;
+  color: DimGrey;
   font-size: 2rem;
   font-weight: 500;
   margin-right: 2rem;
@@ -81,16 +82,18 @@ div.main div.maincontent div.stayhome img {
 }
 div.main div.maincontent div.maintext {
   z-index: 2;
-  margin-left: -350px;
+  margin-left: -250px;
 }
 div.main div.maincontent div.maintext h3 {
-  color: rgb(224, 211, 28);
-  font-size: 3rem;
-  font-weight: 400;
+  color: #FF898B;
+  -webkit-text-stroke: 1px #d17072;
+  font-size: 3.5rem;
+  font-weight: 700;
 }
 div.main div.maincontent div.maintext h2 {
-  font-size: 5rem;
+  font-size: 6rem;
   font-weight: 700;
+  line-height: 7rem;
 }
 
 div.about {
@@ -132,6 +135,7 @@ div.prevent h2 {
   text-align: center;
   font-size: 5rem;
   padding-top: 50px;
+  text-decoration: underline;
 }
 div.prevent div.prevent-todo {
   margin-top: -100px;
@@ -169,6 +173,7 @@ div.contact h2 {
   text-align: center;
   font-size: 5rem;
   padding-top: 50px;
+  text-decoration: underline;
 }
 div.contact div.contact-panel {
   width: 100%;
@@ -209,7 +214,7 @@ div.contact div.contact-panel div.form form textarea {
 div.contact div.contact-panel div.form form input.btn {
   border: none;
   font-size: 3rem;
-  color: gray;
+  color: DimGrey;
   border-radius: 10px;
   cursor: pointer;
   margin-top: 1rem;
@@ -243,15 +248,7 @@ div.contact div.contact-panel div.form form input.btn {
     transform: rotate(-10deg);
   }
 }
-@media (max-width: 1150px) {
-  div.about div.about-text h3 {
-    font-size: 4rem;
-  }
-  div.about div.about-text p {
-    font-size: 1.8rem;
-  }
-}
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   header {
     display: none;
   }
@@ -265,34 +262,9 @@ div.contact div.contact-panel div.form form input.btn {
   div.main div.maincontent div.stayhome img {
     margin-top: 150px;
   }
-  div.about {
-    position: relative;
-    flex-direction: column;
-  }
   div.about div.about-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
-    width: 100%;
-    padding: 0 100px;
-    text-align: center;
-  }
-  div.about div.about-text h3 {
-    font-weight: 600;
-  }
-  div.about div.about-text p {
-    font-size: 2rem;
-    text-shadow: 1px 1px 0 rgb(124, 124, 124);
-  }
-  div.about div.about-image {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 50%;
-    opacity: 0.5;
+    margin-top: 0;
+    width: 80%;
   }
   div.prevent h2 {
     text-align: center;
@@ -312,18 +284,15 @@ div.contact div.contact-panel div.form form input.btn {
     max-width: 35%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   div.about div.about-text {
-    top: 60%;
+    width: 100%;
   }
   div.about div.about-text p {
     font-size: 1.7rem;
   }
-  div.prevent h2 {
-    font-size: 4rem;
-  }
   div.prevent div.prevent-todo {
-    align-content: center;
+    height: 90%;
   }
   div.prevent div.prevent-todo div {
     width: 35%;
@@ -342,28 +311,39 @@ div.contact div.contact-panel div.form form input.btn {
     width: 80vw;
   }
 }
-@media (max-width: 500px) {
-  div.main div.maincontent div.maintext h3 {
-    font-size: 2.3rem;
+@media (max-width: 420px) {
+  img.virus {
+    display: none;
   }
-  div.main div.maincontent div.maintext h2 {
-    font-size: 3rem;
-  }
-  div.main div.maincontent div.stayhome img {
+  div.stayhome img {
     max-width: 80%;
     margin: 0 auto;
   }
-  div.about div.about-text h3 {
-    font-size: 3rem;
+  div.main div.maincontent div.maintext h3 {
+    font-size: 2.5rem;
+  }
+  div.main div.maincontent div.maintext h2 {
+    font-size: 5rem;
+  }
+  div.about-image {
+    display: none;
   }
   div.about div.about-text {
-    width: 130%;
+    padding: 0 1rem;
+  }
+  div.about div.about-text h3 {
+    font-size: 4rem;
   }
   div.prevent h2 {
     font-size: 3rem;
   }
   div.prevent div.prevent-todo {
-    gap: 10px;
+    margin-top: 0;
+    height: 80%;
+  }
+  div.prevent div.prevent-todo div {
+    padding: 0;
+    height: 50%;
   }
   div.prevent div.prevent-todo div h3 {
     font-size: 2rem;
