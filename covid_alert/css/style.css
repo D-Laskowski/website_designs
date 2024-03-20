@@ -47,7 +47,7 @@ header ul li a {
 }
 header ul li a.active, header ul li a:hover {
   border-radius: 1.5rem;
-  background: rgb(240, 240, 21);
+  background: #FF898B;
   color: white;
   text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.315);
 }
@@ -55,7 +55,7 @@ header ul li a.active, header ul li a:hover {
 div.main {
   position: relative;
   height: 100vh;
-  background-image: url("../images/background1.jpg");
+  background-image: url("../assets/images/background1.jpg");
   background-position: center;
   background-size: cover;
 }
@@ -124,7 +124,7 @@ div.about div.about-image img {
 
 div.prevent {
   height: 100vh;
-  background-image: url("../images/background2.jpg");
+  background-image: url("../assets/images/background2.jpg");
   background-size: cover;
   background-position: center;
 }
